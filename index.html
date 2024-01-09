@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Top News</title>
+</head>
+<body>
+
+    <header>
+        <h1>Today's Top News</h1>
+    </header>
+
+    <section id="news">
+        <!-- News articles will be displayed here -->
+    </section>
+
+    <script>
+        // You can fetch and update the news using JavaScript here
+        // For simplicity, let's create a static list of news articles
+
+        const newsData = [
+            {
+                title: "Headline 1",
+                description: "Description for headline 1."
+            },
+            {
+                title: "Headline 2",
+                description: "Description for headline 2."
+            },
+            {
+                title: "Headline 3",
+                description: "Description for headline 3."
+            }
+            // Add more articles as needed
+        ];
+
+        const newsSection = document.getElementById("news");
+
+        // Loop through the newsData and create HTML elements for each news article
+        newsData.forEach(newsItem => {
+            const articleElement = document.createElement("article");
+            articleElement.innerHTML = `
+                <h2>${newsItem.title}</h2>
+                <p>${newsItem.description}</p>
+            `;
+            newsSection.appendChild(articleElement);
+        });
+    </script>
+
+</body>
+</html>
